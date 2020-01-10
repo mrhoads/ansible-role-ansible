@@ -1,0 +1,13 @@
+---
+# tasks file for mrhoads.ansible
+- name: Add Ansible PPA
+  apt_repository:
+    repo: ppa:ansible/ansible 
+    state: present
+  become: true
+
+- name: Install Ansible
+  package:
+    name: ansible
+    state: present
+  become: true
